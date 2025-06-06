@@ -72,10 +72,10 @@ class ProductManagerTest {
         ProductManager manager = new ProductManager();
 
         // Agregar productos
-        manager.addProduct(new Product("p1", "Producto A","electronic", 10.0));
-        manager.addProduct(new Product("p2", "Producto B","Clothing", 20.0));
-        manager.addProduct(new Product("p3", "Producto C","Education", 30.0));
-        manager.addProduct(new Product("p4", "Producto D","electronic", 40.0));
+        manager.addProduct(new Product("p1", "Producto A","electronic", 25.0));
+        manager.addProduct(new Product("p2", "Producto B","Clothing", 19.0));
+        manager.addProduct(new Product("p3", "Producto C","Education", 35.0));
+        manager.addProduct(new Product("p4", "Producto D","electronic", 39.0));
 
         List<Product> filtered = manager.getProductsByPriceRange(15.0, 35.0);
 
