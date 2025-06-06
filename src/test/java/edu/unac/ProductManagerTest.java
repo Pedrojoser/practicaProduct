@@ -7,7 +7,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ProductManagerTest {
-    /*
+
     @Test
     void testAddAndGetProduct() {
         ProductManager manager = new ProductManager();
@@ -84,6 +84,6 @@ class ProductManagerTest {
         assertTrue(filtered.stream().anyMatch(p -> p.getPrice() == 20.0));
         assertTrue(filtered.stream().anyMatch(p -> p.getPrice() == 30.0));
     }
-    */
+
 
 }
