@@ -7,7 +7,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ProductManagerTest {
-    /*
+
     @Test
     void testAddAndGetProduct() {
         ProductManager manager = new ProductManager();
@@ -67,7 +67,23 @@ class ProductManagerTest {
         assertTrue(allProducts.contains(p2));
         assertTrue(allProducts.contains(p3));
     }
+    @Test
+    void testGetProductsByPriceRange() {
+        ProductManager manager = new ProductManager();
 
-     */
+        // Agregar productos
+        manager.addProduct(new Product("p1", "Producto A","electronic", 10.0));
+        manager.addProduct(new Product("p2", "Producto B","Clothing", 20.0));
+        manager.addProduct(new Product("p3", "Producto C","Education", 30.0));
+        manager.addProduct(new Product("p4", "Producto D","electronic", 40.0));
+
+        List<Product> filtered = manager.getProductsByPriceRange(15.0, 35.0);
+
+        assertEquals(2, filtered.size());
+        assertTrue(filtered.stream().allMatch(p -> p.getPrice() >= 15.0 && p.getPrice() <= 35.0));
+        assertTrue(filtered.stream().anyMatch(p -> p.getPrice() == 20.0));
+        assertTrue(filtered.stream().anyMatch(p -> p.getPrice() == 30.0));
+    }
+
 
 }
